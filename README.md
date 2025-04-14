@@ -21,7 +21,7 @@
 ## 🧱 Архитектура
 
 - **Backend**: FastAPI + Pydantic + PostgreSQL
-- **Frontend**:
+- **Frontend**: Electorn + ReactJS
 - **ORM**: SQLAlchemy
 - **DevOps**: 
 - **Визуализация**: Matplotlib / Plotly 
