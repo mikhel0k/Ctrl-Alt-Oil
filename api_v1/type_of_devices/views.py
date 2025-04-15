@@ -6,7 +6,7 @@ from . import crud
 from .schemas import TypeOfDevicesCreate, TypeOfDevices
 
 
-router = APIRouter(prefix="/type_of_device", tags=['reference_books', 'type_of_devices'])
+router = APIRouter(prefix="/type_of_device", tags=['type_of_devices'])
 
 
 @router.get("/all", response_model=list[TypeOfDevices])

@@ -6,7 +6,7 @@ from core.models import db_helper
 from .schemas import ProductiveHorizon, ProductiveHorizonCreate
 from . import crud
 
-router = APIRouter(prefix="/productive_horizon", tags=['reference_books', 'productive_horizon'])
+router = APIRouter(prefix="/productive_horizon", tags=['productive_horizon'])
 
 
 @router.get('/all', response_model=list[ProductiveHorizon])
