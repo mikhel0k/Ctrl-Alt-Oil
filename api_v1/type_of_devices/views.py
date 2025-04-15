@@ -26,5 +26,3 @@ async def get_type_of_device(device_id: int, session: AsyncSession = Depends(db_
     )
     else:
         return device
-
-
