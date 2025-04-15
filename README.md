@@ -25,3 +25,4 @@
 - **ORM**: SQLAlchemy
 - **DevOps**: 
 - **Визуализация**: Matplotlib / Plotly 
+- **База Данных**:![photo_2025-04-15_08-47-16](https://github.com/user-attachments/assets/bed43ec0-e6ec-433b-ae80-8cc32a767685)
