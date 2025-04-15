@@ -8,13 +8,11 @@ from .schemas import TypeOfDevicesCreate, TypeOfDevices
 
 router = APIRouter(prefix="/type_of_device", tags=['reference_books', 'type_of_devices'])
 
+
 @router.get("/all", response_model=list[TypeOfDevices])
 async def get_all_types_of_devices(session: AsyncSession = Depends(db_helper.session_dependency)):
     return await crud.get_all_types_of_devices(session=session)
 
-@router.post("/", response_model=list[TypeOfDevices])
-async def create_type_of_device(device_in: TypeOfDevicesCreate, session: AsyncSession = Depends(db_helper.session_dependency),):
-    return await crud.create_type_of_device(session=session, device_in=device_in)
 
 @router.get("/{device_id}", response_model=TypeOfDevices)
 async def get_type_of_device(device_id: int, session: AsyncSession = Depends(db_helper.session_dependency),):
@@ -26,3 +24,8 @@ async def get_type_of_device(device_id: int, session: AsyncSession = Depends(db_
     )
     else:
         return device
+
+
+@router.post("/", response_model=list[TypeOfDevices])
+async def create_type_of_device(device_in: TypeOfDevicesCreate, session: AsyncSession = Depends(db_helper.session_dependency),):
+    return await crud.create_type_of_device(session=session, device_in=device_in)

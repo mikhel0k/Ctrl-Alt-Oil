@@ -6,8 +6,6 @@ import uvicorn
 
 from core.models import db_helper, Base
 from api_v1 import router as router_v1
-from views.add_measurements import router as add_measurements_router
-from views.add_general_info import router as add_general_information_router
 
 
 @asynccontextmanager
@@ -18,8 +16,6 @@ async def lifespan(app:FastAPI):
     yield
 
 app = FastAPI(lifespan=lifespan)
-app.include_router(add_measurements_router)
-app.include_router(add_general_information_router)
 app.include_router(router_v1)
 
 
