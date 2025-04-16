@@ -7,7 +7,7 @@ from .schemas import ProductiveHorizonCreate
 
 async def get_all_productive_horizon(session: AsyncSession):
     stmt = select(ProductiveHorizon).order_by(ProductiveHorizon.id)
-    result = await session.execute(stmt)
+    result: Result = await session.execute(stmt)
     return result.scalars().all()
 
 

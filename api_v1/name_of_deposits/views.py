@@ -12,7 +12,7 @@ router = APIRouter(prefix="/name_of_deposits", tags=['name_of_deposits'])
 async def get_all_name_of_devices(session: AsyncSession = Depends(db_helper.session_dependency)):
     return await crud.get_all_name_of_deposits(session=session)
 
-@router.post("/", response_model=list[NameOfDeposits])
+@router.post("/", response_model=NameOfDeposits)
 async def create_name_of_deposit(deposit_in: NameOfDepositsCreate, session: AsyncSession = Depends(db_helper.session_dependency),):
     return await crud.create_name_of_deposit(session=session, deposit_in=deposit_in)
 

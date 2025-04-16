@@ -26,6 +26,6 @@ async def get_type_of_device(device_id: int, session: AsyncSession = Depends(db_
         return device
 
 
-@router.post("/", response_model=list[TypeOfDevices])
+@router.post("/", response_model=TypeOfDevices)
 async def create_type_of_device(device_in: TypeOfDevicesCreate, session: AsyncSession = Depends(db_helper.session_dependency),):
     return await crud.create_type_of_device(session=session, device_in=device_in)

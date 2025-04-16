@@ -20,7 +20,7 @@ app.include_router(router_v1)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
