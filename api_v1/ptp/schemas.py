@@ -26,6 +26,6 @@ class PtpCreate(PtpBase):
     pass
 
 
-class Plin(PtpBase):
+class Ptp(PtpBase):
     model_config = ConfigDict(from_attributes=True)
     id: int

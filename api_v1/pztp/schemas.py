@@ -26,6 +26,6 @@ class PztpCreate(PztpBase):
     pass
 
 
-class Pztpn(PztpBase):
+class Pztp(PztpBase):
     model_config = ConfigDict(from_attributes=True)
     id: int
