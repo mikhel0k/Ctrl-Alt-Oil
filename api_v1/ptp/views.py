@@ -20,7 +20,7 @@ async def get_ptp(ptp_id: int, session: AsyncSession = Depends(db_helper.session
 
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail=f"Horizon {ptp_id} not found!"  # строка, а не множество
+        detail=f"Ptp {ptp_id} not found!"  # строка, а не множество
     )
 
 

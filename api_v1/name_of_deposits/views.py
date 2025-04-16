@@ -22,7 +22,7 @@ async def get_name_of_deposit(deposit_id: int, session: AsyncSession = Depends(d
     if deposit is None:
         raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
-        detail=f"Device {deposit_id} not found!"
+        detail=f"Deposit {deposit_id} not found!"
     )
     else:
         return deposit
